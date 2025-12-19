@@ -34,9 +34,8 @@ def main() -> None:
     # llm = ChatOpenAI(temperature=0, model="gpt-5-nano-2025-08-07")
     llm = ChatOllama(
         temperature=0.1, 
-        model="gpt-oss:20b", 
-        validate_model_on_init=True, 
-        reasoning=True
+        model="granite4:350m-h", 
+        validate_model_on_init=True
         )
     chain = summary_prompt_template | llm
 
